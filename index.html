@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ruffle Demo</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ruffle/6.0.0/ruffle.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #333;
+        }
+        #flash-container {
+            width: 640px;
+            height: 480px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="flash-container"></div>
+    <script>
+        const ruffle = window.RufflePlayer.newest();
+        const container = document.getElementById("flash-container");
+        const player = ruffle.createPlayer();
+        container.appendChild(player);
+        player.load("Bloons.swf");
+    </script>
+</body>
+</html>
